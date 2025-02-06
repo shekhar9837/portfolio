@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        roboto: "Roboto, sans-serif",
+        hentaigana: "Noto Serif Hentaigana, sans-serif",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
