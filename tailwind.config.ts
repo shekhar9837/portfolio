@@ -1,3 +1,4 @@
+import { Poppins } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,8 +10,10 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        roboto: "Roboto, sans-serif",
+        poppins: "Poppins, sans-serif",
         hentaigana: "Noto Serif Hentaigana, sans-serif",
+        triodion: "Triodion, sans-serif",
+        ptmono: "PT Mono, sans-serif",
       },
       colors: {
         background: "var(--background)",
