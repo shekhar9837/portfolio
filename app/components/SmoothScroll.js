@@ -1,29 +1,47 @@
 "use client";
 import { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
 
 const SmoothScroll = ({ children }) => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
-    if (!scrollRef.current) return;
+    // Check if we're in the browser
+    if (typeof window === "undefined" || !scrollRef.current) return;
 
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      multiplier: 1.2, // Adjust scroll speed
-      lerp: 0.1, // Adjust smoothing
-    });
+    // Dynamically import Locomotive Scroll
+    const initScroll = async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      
+      const scroll = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        multiplier: 0.3,
+        lerp: 0.1,
+        smartphone: {
+          smooth: true
+        },
+        tablet: {
+          smooth: true
+        }
+      });
 
-    return () => {
-      if (scroll) scroll.destroy();
+      // Cleanup function
+      return () => {
+        if (scroll) scroll.destroy();
+      };
     };
+
+    initScroll();
   }, []);
 
   return (
-    <div ref={scrollRef} data-scroll-container>
+    <main 
+      ref={scrollRef} 
+      data-scroll-container 
+      className="relative w-full min-h-screen"
+    >
       {children}
-    </div>
+    </main>
   );
 };
 

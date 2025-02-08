@@ -3,6 +3,8 @@ import { Roboto } from "next/font/google";
 import { Navbar } from "./components/Navbar";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll"
+import Footer from "./components/Footer";
+
 export const metadata: Metadata = {
   title: "Shekhar",
   description: "Creating innovative digital experiences, brand identities, and art direction.",
@@ -29,6 +31,7 @@ export default function RootLayout({
           <SmoothScroll>
         <Navbar />
         {children}
+        <Footer/>
         </SmoothScroll>
       </body>
     </html>

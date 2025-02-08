@@ -1,5 +1,11 @@
+"use client";
+
 import Image from "next/image"
 import { HomePage } from "./components/HomePage"
+import { Projects } from "./components/Projects"
+import IntroductionPage from "./components/IntroductionPage"
+import Skills from "./components/Skills"
+import Footer from "./components/Footer"
 
 
 export default function Page() {
@@ -18,7 +24,9 @@ export default function Page() {
     <div className="custom:px-10 flex flex-col items-center justify-center py-16">
       <HomePage />
       </div>
-      {/* <HomePage /> */}
+      <Projects/>
+      <IntroductionPage/>
+      <Skills/>
   
     
      
