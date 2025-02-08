@@ -22,3 +22,19 @@ body {
   background: var(--background);
   font-family: 'Poppins',  'Noto Serif Hentaigana', 'Triodion', 'PT Mono', 'sans-serif';
 }
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  cursor: grab;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-section] {
+  will-change: transform;
+}

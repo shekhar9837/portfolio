@@ -10,7 +10,11 @@ export const Navbar = () => {
   const items = ["HOME", "WORK", "ABOUT"];
 
   return (
-    <nav className="navbar font-ptmono z-50 absolute top-5 w-full px-6 flex items-center flex-flex justify-between">
+    <motion.nav 
+      initial={{y: "-100%"}}
+      animate={{y: 0}}
+      transition={{duration: 1.4, ease:"easeInOut"}}
+    className="navbar font-ptmono z-50 absolute top-2 w-full px-6 flex items-center flex-flex justify-between">
       <div className="name">
         <Link href={"/"}>
           <p className="capitalize font-">SHEKHAR</p>
@@ -77,6 +81,6 @@ export const Navbar = () => {
           </svg>
         </button>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
