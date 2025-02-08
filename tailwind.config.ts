@@ -8,6 +8,9 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'custom': '1080px', // Add your custom 1080px breakpoint
+    },
     extend: {
       fontFamily:{
         poppins: "Poppins, sans-serif",
@@ -19,6 +22,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+
     },
   },
   plugins: [],

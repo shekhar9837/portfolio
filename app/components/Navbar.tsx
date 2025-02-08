@@ -21,7 +21,7 @@ export const Navbar = () => {
         </Link>
       </div>
 
-      <div className="flex">
+      <div className="custom:flex hidden">
         {items.map((item, index) => (
           <div
             key={index}

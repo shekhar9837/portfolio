@@ -2,81 +2,80 @@ import Image from "next/image";
 import * as motion from "motion/react-client";
 
 export const HomePage = () => {
+  const text = `I build interactive web apps that \n  
+    make you fall in love with the \n  
+    experience—not me, lol. Clean, \n
+    engaging, and straight-up.`.split("\n");
+
   return (
     <div className="py-24 relative w-full max-w-7xl z-40 flex flex-row items-center justify-center ">
-      <div data-scroll data-scroll-delay="0.2" className="w-full  max-w-[74%] bg-red-  px-  ">
+      <div
+        // data-scroll
+        // data-scroll-delay="0.2"
+        className="w-full  custom:max-w-[74%] max-w-2xl "
+      >
         {/* <div className="bg-green-300 h-fit"> */}
-
-        <motion.h1
-          initial={{x: 0, opacity:0}}
-          animate={{x: 10, opacity:1}}
-          transition={{duration: 0.4, ease:"linear"}}
-          className="text-[1.6rem]   w-fit pl-4 bg-red- font-semibold -mb-10 tracking-tight font-"
-
-        >
-          Hey! It's me
-        </motion.h1>
-
-        <motion.h1
-          initial={{ x: 0, opacity: 0 }}
-          animate={{ x: 12, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          // initial={{ y: 100,   opacity: 0 }}
-          // animate={{ y: 1, opacity: 1 }}
-
-          className="text-[9.8rem] pl-10 font-semibold -mb-10 tracking-tight font-"
-        >
-          Shekhar
-        </motion.h1>
+        <div className="custom:h-fit  ">
+          <motion.h1
+            initial={{ x: 0 }}
+            animate={{ x: 12 }}
+            transition={{ duration: 1.4, ease: "easeInOut" }}
+            className="custom:text-[1.6rem] text-[1rem] custom:text-start custom:flex hidden    custom:pl-20 bg-red- font-semibold custom:-mb-10 tracking-tight font-"
+          >
+            Hey! It's me
+          </motion.h1>
+        </div>
+        <div className="h-fit overflow-hidden custom:mb-0  ">
+          <motion.h1
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1.4, ease: "easeInOut" }}
+            className="custom:text-[9.8rem] text-[5rem] text-center custom:pl-10 font-semibold custom:-mb-10 tracking-tight "
+          >
+            Shekhar
+          </motion.h1>
+        </div>
         {/* </div> */}
-          <div className="flex relative  items-start justify-end px-28 w-full gap-10 bg-red-  bg-green- ">
-        {/* <div className="w-full max-w-[70%] bg-green-200  flex items-start  justify-center"> */}
+        <div className="flex   custom:items-start items-start custom:justify-end justify-end  custom:px-28  w-full custom:gap-2 gap-10 ">
+          {/* <div className="w-full max-w-[70%] bg-green-200  flex items-start  justify-center"> */}
+          <div className="overflow-hidden h-fit ">
             <motion.h1
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: -12, opacity: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-medium tracking-wide pt-2 pr-6 font-ptmono bg-green-"
+              // initial={{ opacity: 0 }}
+              // animate={{  opacity: 1 }}
+              // transition={{ duration: 0.6, ease: "easeOut", delay:1 }}
+              initial={{ y: "-100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.4, ease: "easeInOut" }}
+              className="font-medium tracking-wide    custom:pr-14 font-ptmono bg-green-"
             >
               {"[INTRO]"}
             </motion.h1>
-            <motion.p
-              initial={{ y: 0, opacity: 0 }}
-              animate={{ y: 12, opacity: 1 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className=" max-w-xs bg-red- pr-6 px-2  font-poppins font-semibold tracking-tight text-[]
-           "
-            >
-              I build interactive web apps that make you fall in love with the
-              experience—not me, lol. Clean, engaging, and straight-up
-              addictive.
-            </motion.p>
-        {/* </div> */}
           </div>
+
+          <div className="flex flex-col custom:items-start  custom:pl-5  custom:flex-wrap  custom:w-full w-fit custom:max-w-xs ">
+            {text.map((el, i) => (
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 1.4,
+                  delay: 1.2 + i / 10, // Added 2 second delay
+                }}
+                key={i}
+                className="custom:max-w-xs w-fit custom:text-start   font-poppins font-semibold tracking-tight custom:mx-1"
+              >
+                {" "}
+                {el}{" "}
+              </motion.p>
+            ))}
+          </div>
+          {/* </div> */}
+        </div>
       </div>
 
       <div className="absolute bottom-2 left-0 font-medium px-2 text-lg">
         Scroll Down
       </div>
-      {/* <div className="w-full max-w-[50%] flex flex-col items-end justify-end">
-        <p className="w-full max-w-[72%] mt-8 font-semibold mb-2 text-start">
-          /20
-        </p>
-        <div className="h-fit bg-green-400 w-fit flex items-center justify-center overflow-hidden">
-          <motion.img
-            src="/𝙎𝙖𝙞𝙩𝙖𝙢𝙖.jpeg"
-            alt="hero"
-            width={1080}
-            height={1080}
-            className="h-auto w-9/12 pl-4 px-2"
-            initial={{ y: "-100%" }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 1.5,
-              ease: "easeOut",
-            }}
-          />
-        </div> */}
-      {/* </div> */}
     </div>
   );
 };
