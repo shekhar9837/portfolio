@@ -10,7 +10,7 @@ import Footer from "./components/Footer"
 
 export default function Page() {
   return (
-    <section id="hero" className="relative w-full px-6">
+    <section id="hero" className="relative w-full  max-w-7xl px-6">
     {/* Background grid */}
 
     <div className="absolute inset-0 w-full h-full grid custom:grid-cols-8 grid-cols-4 gap-6 px-6 custom:px-12 pointer-events-none">
@@ -24,9 +24,12 @@ export default function Page() {
     <div className="custom:px-10 flex flex-col items-center justify-center py-16">
       <HomePage />
       </div>
+      <div className="w-full max-w-7xl">
+        
       <Projects/>
       <IntroductionPage/>
       <Skills/>
+      </div>
   
     
      

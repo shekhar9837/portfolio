@@ -1,77 +1,64 @@
 "use client";
 
-
-import * as motion from "motion/react-client";
+import { motion } from "framer-motion"; // ✅ Correct import
 
 export const HomePage = () => {
-  const text = `I build interactive web apps that \n  
-    make you fall in love with the \n  
-    experience—not me, lol. Clean, \n
-    engaging, and straight-up.`.split("\n");
+  const text = `I build interactive web apps that make you fall in love with the experience—not me, lol. Clean, engaging, and straight-up.`
+  .split(" ") // ✅ Now words will animate one by one
+  .map((word) => word.trim())
+  .filter((word) => word.length > 0);
 
   return (
-    <div className="py-24 relative w-full max-w-7xl z-40 flex flex-row items-center justify-center ">
-      <div
-        // data-scroll
-        // data-scroll-delay="0.2"
-        className="w-full  custom:max-w-[74%] max-w-2xl "
-      >
-        {/* <div className="bg-green-300 h-fit"> */}
-        <div className="custom:h-fit  ">
+    <div className="py-24 relative w-full max-w-7xl z-40 flex flex-row items-center justify-center">
+      <div className="w-full custom:max-w-[74%] max-w-2xl">
+        <div className="custom:h-fit">
           <motion.h1
             initial={{ x: 0 }}
             animate={{ x: 12 }}
             transition={{ duration: 1.4, ease: "easeInOut" }}
-            className="custom:text-[1.6rem] text-[1rem] custom:text-start custom:flex hidden    custom:pl-20 bg-red- font-semibold custom:-mb-10 tracking-tight font-"
+            className="custom:text-[1.6rem] text-[1rem] custom:text-start custom:flex hidden custom:pl-20 font-semibold custom:-mb-10 tracking-tight"
           >
             Hey! It's me
           </motion.h1>
         </div>
-        <div className="h-fit overflow-hidden custom:mb-0  ">
+        <div className="h-fit overflow-hidden custom:mb-0">
           <motion.h1
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1.4, ease: "easeInOut" }}
-            className="custom:text-[9.8rem] text-[5rem] text-center custom:pl-10 font-semibold custom:-mb-10 tracking-tight "
+            className="custom:text-[9.8rem] text-[5em] text-center custom:pl-10 font-semibold custom:-mb-10 tracking-tight"
           >
             Shekhar
           </motion.h1>
         </div>
-        {/* </div> */}
-        <div className="flex   custom:items-start items-start custom:justify-end justify-end  custom:px-28  w-full custom:gap-2 gap-10 ">
-          {/* <div className="w-full max-w-[70%] bg-green-200  flex items-start  justify-center"> */}
-          <div className="overflow-hidden h-fit ">
+        <div className="flex custom:items-start items-start custom:justify-end justify-end custom:px-28 px-1 w-full custom:gap-2 gap-10">
+          <div className="overflow-hidden h-fit">
             <motion.h1
-              // initial={{ opacity: 0 }}
-              // animate={{  opacity: 1 }}
-              // transition={{ duration: 0.6, ease: "easeOut", delay:1 }}
               initial={{ y: "-100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1.4, ease: "easeInOut" }}
-              className="font-medium tracking-wide    custom:pr-14 font-ptmono bg-green-"
+              className="font-medium text-md tracking-wide custom:pr-14 font-ptmono"
             >
               {"[INTRO]"}
             </motion.h1>
           </div>
 
-          <div className="flex flex-col custom:items-start  custom:pl-5  custom:flex-wrap  custom:w-full w-fit custom:max-w-xs ">
-            {text.map((el, i) => (
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  duration: 1.4,
-                  delay: 1.2 + i / 10, // Added 2 second delay
-                }}
+          <motion.div className="flex flex-wrap gap-1 w-full custom:max-w-xs  custom:pl-10">
+            {text.map((word, i) => (
+              <motion.span
                 key={i}
-                className="custom:max-w-xs w-fit custom:text-start   font-poppins font-semibold tracking-tight custom:mx-1"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.1 * i, // ✅ Animate each word one by one
+                }}
+                className="text-md font-semibold tracking-tight "
               >
-                {" "}
-                {el}{" "}
-              </motion.p>
+                {word}{" "}
+              </motion.span>
             ))}
-          </div>
-          {/* </div> */}
+          </motion.div>
         </div>
       </div>
 

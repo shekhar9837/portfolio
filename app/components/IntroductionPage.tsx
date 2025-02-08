@@ -5,14 +5,14 @@ import * as motion from "motion/react-client";
 
 const IntroductionPage = () => {
   return (
-    <div className="relative z-50  custom:px-10 py-20">
+    <div className="relative z-50  custom:px-10 py-20 w-full max-w-7xl">
       <div className="h-fit overflow-hidden  ">
         <motion.h1
           initial={{ y: "100%" }}
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.4, ease: "easeInOut" }}
-          className="custom:text-[7rem] text-[4rem] text-start  font-semibold  tracking-tight "
+          className="custom:text-[7rem] text-5xl text-start  font-semibold  tracking-tight "
         >
           Introduction
         </motion.h1>
@@ -56,7 +56,6 @@ const IntroductionPage = () => {
         </div>
       </div>
 
-      <div className="flex bg-red-400 w-fit"></div>
     </div>
   );
 };

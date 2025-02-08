@@ -65,7 +65,7 @@ const Skills = () => {
                whileInView={{ y: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 1.4, ease: "easeInOut" }}
-               className="custom:text-[6rem]  text-[4rem] text-start  font-semibold  tracking-tight "
+               className="custom:text-[6rem] leading-none  text-[4rem] text-start  font-semibold  tracking-tight "
              >
                My Bread & Butter 
              </motion.h1>
