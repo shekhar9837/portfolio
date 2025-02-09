@@ -38,7 +38,7 @@ export const Navbar = () => {
       initial={{ y: "-100%" }}
       animate={{ y: 0 }}
       transition={{ duration: 1.4, ease: "easeInOut" }}
-      className="navbar font-ptmono z-50 absolute top-2 w-full px-6 flex items-center flex-flex justify-between"
+      className="navbar font-ptmono z-50 absolute top-2 w-full px-6 flex items-center flex-flex justify-between max-w-7xl"
     >
       <div className="name">
         <Link href={"/"}>

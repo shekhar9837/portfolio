@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white min-h-[60vh] md:p-12 p-6 flex flex-col justify-between font-mono">
+    <footer className="bg-black text-white max-w-7xl min-h-[60vh] md:p-12 p-6 flex flex-col justify-between font-mono">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center w-full">
         <h2 className="text-2xl font-bold">SHEKHAR</h2>
