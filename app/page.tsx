@@ -6,6 +6,8 @@ import { Projects } from "./components/Projects"
 import IntroductionPage from "./components/IntroductionPage"
 import Skills from "./components/Skills"
 import Footer from "./components/Footer"
+import WorkExperience from "./components/WorkExperience";
+import ConnectPage from "./components/ConnectPage";
 
 
 export default function Page() {
@@ -27,6 +29,7 @@ export default function Page() {
       <div className="w-full max-w-7xl">
         
       <Projects/>
+      {/* <WorkExperience/> */}
       <IntroductionPage/>
       <Skills/>
       </div>

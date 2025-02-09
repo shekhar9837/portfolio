@@ -79,8 +79,8 @@ const Skills = () => {
             className="max-w-[1000px]"
             questionClassName="bg-secondary hover:bg-secondary/80"
             answerClassName="bg-secondary text-secondary-foreground"
-            // timestamp="Updated daily at 12:00 PM"
-            timestamp={`last updated at ${time}`}
+            timestamp="Updated daily at 12:00 PM"
+            // timestamp={`last updated at ${time}`}
             />
         <div className="flex flex-col custom:px-16 w-full items-end justify-end">
         <Button/>

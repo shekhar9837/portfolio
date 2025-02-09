@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll"
 import Footer from "./components/Footer";
+import ConnectPage from "./components/ConnectPage";
 
 export const metadata: Metadata = {
   title: "Shekhar",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <SmoothScroll>
         <Navbar />
         {children}
+        <ConnectPage/>
         <Footer/>
         </SmoothScroll>
       </body>
