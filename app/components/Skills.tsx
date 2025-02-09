@@ -65,7 +65,7 @@ const Skills = () => {
                whileInView={{ y: 0 }}
                viewport={{ once: true }}
                transition={{ duration: 1.4, ease: "easeInOut" }}
-               className="custom:text-[6rem] leading-none  text-[4rem] text-start  font-semibold  tracking-tight "
+               className="custom:text-[6rem] leading-none  text-5xl text-start  font-semibold  tracking-tight "
              >
                My Bread & Butter 
              </motion.h1>
@@ -79,7 +79,7 @@ const Skills = () => {
             className="max-w-[1000px]"
             questionClassName="bg-secondary hover:bg-secondary/80"
             answerClassName="bg-secondary text-secondary-foreground"
-            timestamp="Updated daily at 12:00 PM"
+            timestamp="Updated at 12:00 PM"
             // timestamp={`last updated at ${time}`}
             />
         <div className="flex flex-col custom:px-16 w-full items-end justify-end">

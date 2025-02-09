@@ -15,7 +15,7 @@ export default function Page() {
     <section id="hero" className="relative w-full  max-w-7xl px-6">
     {/* Background grid */}
 
-    <div className="absolute inset-0 w-full h-full grid custom:grid-cols-8 grid-cols-4 gap-6 px-6 custom:px-12 pointer-events-none">
+    <div className="absolute inset-0 w-full h-full grid custom:grid-cols-8 grid-cols-3 gap-6 px-6 custom:px-12 pointer-events-none">
       {[...Array(8)].map((_, i) => (
         <div key={i} className="border-l border-r border-zinc-300 h-full" />
       ))}

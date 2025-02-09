@@ -12,10 +12,10 @@ const ConnectPage = () => {
         className='h-[80vh] '
         />
 
-        <div className='absolute left-0 top-44 custom:px-6 px-6 flex custom:flex-row flex-col items-center justify-between'>
-            <h3 className='w-1/2 font-semibold text-[3rem] text-white'>Lets connect</h3>
+        <div className='absolute left-0 md:top-44 top-20 custom:px-6 px-6 flex custom:flex-row flex-col  custom:items-center items-start justify-between'>
+            <h3 className='md:w-1/2 font-semibold text-[3rem] text-white'>Lets connect</h3>
 
-            <div className='w-1/2 '>
+            <div className='md:w-1/2 '>
 
 
             <p className='font-semibold text-white'>
@@ -24,7 +24,7 @@ const ConnectPage = () => {
             <div className="flex items-start justify-start w-full mt-8" >
         <button
           type="submit"
-          className="flex  gap-2   font-ptmono text-white  z-10 px-4 py-2 overflow-hidden rounded-md group"
+          className="flex  gap-2   font-ptmono text-white  z-10 custom:px-4 py-2 overflow-hidden rounded-md group"
         >
           CONTACT
           <svg
