@@ -94,11 +94,12 @@ export const Navbar = () => {
         <ContactButton />
       </div>
 
-      <div className="custom:hidden">
+      <div className="custom:hidden ">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white rounded-md border bg-neutral-800  px-3 py-2   font-ptmono"
         >
+
           {isMenuOpen ? "CLOSE" : "MENU"}
         </button>
       </div>

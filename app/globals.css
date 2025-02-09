@@ -114,3 +114,12 @@ html.has-scroll-dragging {
     mask-size: 350vmax;
   }
 }
+
+
+html {
+  --cursor-color: #000
+}
+
+html.dark {
+  --cursor-color: #fff;
+}
