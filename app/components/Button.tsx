@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <button className="button">
-        <span>Check My Work Experience</span>
+      <button className="button font-ptmono">
+        <span className='text-white dark:text-neutral-950'>Check My Work Experience</span>
       </button>
     </StyledWrapper>
   );

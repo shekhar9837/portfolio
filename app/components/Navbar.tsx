@@ -7,6 +7,7 @@ import { AnimatePresence } from "motion/react";
 import { RiTwitterXFill } from "react-icons/ri";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 export const Navbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null as number | null);
@@ -16,11 +17,11 @@ export const Navbar = () => {
   const ContactButton = () => (
     <button
       type="submit"
-      className="flex justify-center gap-2 items-center mx-auto  font- bg-gray-50 backdrop-blur-md  isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-neutral-900 hover:text-zinc-100 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden  rounded-md group"
+      className="flex justify-center gap-2 items-center mx-auto dark:border-neutral-900 border backdrop-blur-md  isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full dark:before:bg-zinc-50 before:bg-neutral-950 dark:hover:text-black hover:text-zinc-100 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden  rounded-md group"
     >
       CONTACT
       <svg
-        className="w-7 h-7 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+        className="w-7 h-7 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border dark:border-zinc-100 border-gray-400 group-hover:border-none p-2 rotate-45"
         viewBox="0 0 16 19"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -44,6 +45,7 @@ export const Navbar = () => {
           <p className="capitalize font-">SHEKHAR</p>
         </Link>
       </div>
+
 
       <div className="custom:flex hidden">
         {items.map((item, index) => (
@@ -87,7 +89,8 @@ export const Navbar = () => {
           </div>
         ))}
       </div>
-      <div className="custom:flex hidden">
+      <div className="custom:flex hidden gap-2">
+      <ThemeToggle/>
         <ContactButton />
       </div>
 
