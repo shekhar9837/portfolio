@@ -1,30 +1,38 @@
-import { MoonIcon, SunMoon } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import React, { useState, useEffect } from 'react';
+"use client";
+
+import { MoonIcon, SunMoon } from "lucide-react";
+import { useTheme } from "next-themes";
+import React, { useState, useEffect } from "react";
 
 const ThemeToggle: React.FC = () => {
-    const { theme, setTheme } = useTheme();
-    const [currentTheme, setCurrentTheme] = useState(theme);
+    const { theme, setTheme, systemTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setCurrentTheme(theme);
-    }, [theme]);
+        setMounted(true);
+    }, []);
+
+    // Ensure hydration matches the server theme
+    const currentTheme = theme === "system" ? systemTheme : theme;
 
     const switchTheme = () => {
-        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+        setTheme(currentTheme === "light" ? "dark" : "light");
     };
 
     const toggleTheme = () => {
-        if (!document.startViewTransition) {
-            switchTheme();
+        if (typeof document.startViewTransition === "function") {
+            document.startViewTransition(() => switchTheme());
         } else {
-            document.startViewTransition(switchTheme);
+            switchTheme();
         }
     };
 
+    // Prevent SSR mismatch by only rendering after hydration
+    if (!mounted) return null;
+
     return (
         <button onClick={toggleTheme}>
-            {currentTheme === 'light' ? (
+            {currentTheme === "light" ? (
                 <span className="icon-sun">
                     <SunMoon />
                 </span>

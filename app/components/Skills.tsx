@@ -30,7 +30,8 @@ const defaultData: FAQItem[] = [
     },
     {
       question: "Do you practice Data Structures and Algorithms?",
-      answer: "Yes, I regularly practice DSA using Python on LeetCode to improve problem-solving skills.",
+      answer: "Nope, i'm just a chill guy.",
+      // answer: "Yes, I regularly practice DSA using Python on LeetCode to improve problem-solving skills.",
       icon: "📚",
       iconPosition: "left",
       id: 4,
@@ -55,7 +56,6 @@ const skills = [
 ];
 
 const Skills = () => {
-  const time = new Date().toLocaleTimeString();
   
   return (
     <div className="relative z-50 custom:px-10 py-20">

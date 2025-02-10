@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion"; // ✅ Correct import
+import * as motion from "motion/react-client";
 
 export const HomePage = () => {
   const text = `I build interactive web apps that make you fall in love with the experience—not me, lol. Clean, engaging, and straight-up.`
-  .split(" ") // ✅ Now words will animate one by one
+  .split(" ") 
   .map((word) => word.trim())
   .filter((word) => word.length > 0);
 

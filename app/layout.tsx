@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Navbar } from "./components/Navbar";
 import "./globals.css";
-import SmoothScroll from "./components/SmoothScroll";
 import Footer from "./components/Footer";
 import ConnectPage from "./components/ConnectPage";
 import { ThemeProvider } from "./components/theme-provider";
 import AnimatedCursor from "react-animated-cursor"
+import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Shekhar",
@@ -27,17 +27,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning>
         <SmoothScroll>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+            // enableSystem
+            // disableTransitionOnChange
           >
 
           <Navbar />
-        <AnimatedCursor
+        {/* <AnimatedCursor
   innerSize={8}
   outerSize={35}
   innerScale={1}
@@ -49,7 +49,7 @@ export default function RootLayout({
   innerStyle={{
     backgroundColor: 'var(--cursor-color)'
   }}
-/>
+/> */}
           {children}
           <ConnectPage />
           <Footer />

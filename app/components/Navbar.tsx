@@ -11,7 +11,12 @@ import ThemeToggle from "./ThemeToggle";
 
 export const Navbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null as number | null);
-  const items = ["HOME", "WORK", "ABOUT"];
+  // const items = ["HOME", "WORK", "ABOUT"];
+  const items =[
+    { name:"HOME",  link:'/'},
+    { name:"WORK",  link:'/work'},
+    { name:"ABOUT",  link:'/about'}
+  ] 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const ContactButton = () => (
@@ -67,8 +72,10 @@ export const Navbar = () => {
                     ease: "easeInOut",
                   }}
                   className="absolute font-medium tracking-wider cursor-pointer"
-                >
-                  {index === 2 ? item : `${item}`}
+                  >
+                  <Link href={item.link}>
+                  {index === 2 ? item.name : `${item.name}`}
+                  </Link>
                 </motion.p>
               ) : (
                 <motion.p
@@ -81,8 +88,10 @@ export const Navbar = () => {
                     ease: "easeInOut",
                   }}
                   className="absolute font-medium tracking-wider cursor-pointer"
-                >
-                  {index === 2 ? item : `${item}`}
+                  >
+                  <Link href={item.link}>
+                  {index === 2 ? item.name : `${item.name}`}
+                  </Link>
                 </motion.p>
               )}
             </AnimatePresence>
@@ -123,10 +132,10 @@ export const Navbar = () => {
                 className="py-2"
               >
                 <Link
-                  href={`/${item.toLowerCase()}`}
+                  href={`/${item.link}`}
                   className="text-gray-800 hover:text-gray-600"
                 >
-                  {item}
+                  {item.name}
                 </Link>
               </motion.div>
             ))}
