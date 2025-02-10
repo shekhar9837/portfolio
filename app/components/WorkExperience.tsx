@@ -85,7 +85,11 @@ const WorkExperience = () => {
 
       <div className="w-full">
       <Timeline data={data} />
+
+      
     </div>
+   
+
 
     </div>
   );

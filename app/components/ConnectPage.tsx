@@ -3,7 +3,7 @@ import React from 'react'
 
 const ConnectPage = () => {
   return (
-    <div className='relative max-w-7xl flex items-center justify-center '>
+    <div className='relative z-10 max-w-7xl flex items-center justify-center '>
         <Image
         src={"/wp4083639-mount-wallpapers.jpg"}
         width={1920}

@@ -33,19 +33,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full  md:px-10 "
-      ref={containerRef}
-    >
-    <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-  <h2 className="font-semibold leading-none custom:text-[3rem] text-xl mb-4 text-black dark:text-white max-w-4xl">
-    My Learning &  Development Journey
-  </h2>
-  <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-    Over the past two years, I’ve been continuously learning and building projects. 
-    Here’s a timeline highlighting key milestones in my journey.
-  </p>
-</div>
+    <div className="w-full  md:px-10 " ref={containerRef}>
+      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+        <h2 className="font-semibold leading-none custom:text-[3rem] text-xl mb-4 text-black dark:text-white max-w-4xl">
+          My Learning & Development Journey
+        </h2>
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+          Over the past two years, I’ve been continuously learning and building
+          projects. Here’s a timeline highlighting key milestones in my journey.
+        </p>
+      </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
@@ -68,6 +65,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </h3>
               {item.content}{" "}
             </div>
+            
           </div>
         ))}
         <div
@@ -83,8 +81,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             }}
             className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
+          
         </div>
+        
       </div>
+      
+       
     </div>
   );
 };
