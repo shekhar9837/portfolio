@@ -29,7 +29,7 @@ export default function Page() {
       <div className="w-full max-w-7xl">
         
       <Projects/>
-      {/* <WorkExperience/> */}
+      <WorkExperience/>
       <IntroductionPage/>
       <Skills/>
       </div>

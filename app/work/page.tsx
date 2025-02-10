@@ -4,7 +4,7 @@ import { BentoGrid } from '../components/BentoGrid';
 
 const Work = () => {
   return (
-     <div className="relative z-10  custom:px-10 py-20 px-6  w-full max-w-7xl">
+     <div className="relative z-10  custom:px-10 py-28 px-6  w-full max-w-7xl">
        <div className="h-fit overflow-hidden  ">
          <motion.h1
            initial={{ y: "100%" }}
@@ -19,7 +19,7 @@ const Work = () => {
  
        <div className="w-full  flex custom:flex-row flex-col justify-center custom:py-20 py-10">
            <motion.h1 className="font-medium tracking-wide custom:mb-0 mb-10   custom:pr-14 font-ptmono bg-green-">
-             {"[ABOUT]"}
+             {"[WORK]"}
            </motion.h1>
  
          <motion.div
@@ -29,12 +29,17 @@ const Work = () => {
            viewport={{ once: true }}
            transition={{ duration: 1, ease: "easeInOut" }}
          >
-           <p className="custom:text-start font-poppins font-semibold tracking-tight">
-             As a full stack developer, I specialize in building robust and scalable web applications. My expertise spans both front-end and back-end technologies, allowing me to create seamless user experiences and efficient server-side logic. I am passionate about leveraging modern frameworks and tools to deliver high-quality software solutions that meet the needs of users and businesses alike.
-           </p>
-           <p className="custom:text-start font-poppins font-semibold tracking-tight pt-10">
-             Throughout my projects, I emphasize clean code, maintainability, and performance optimization. I enjoy collaborating with cross-functional teams to bring innovative ideas to life and continuously strive to stay updated with the latest industry trends and best practices. My goal is to contribute to impactful projects that drive success and growth.
-           </p>
+                    <p className="custom:text-start font-poppins font-medium tracking-tight">
+  I'm a passionate full-stack developer with a keen eye for design, crafting seamless digital 
+  experiences that blend functionality and aesthetics. My journey is driven by curiosity, 
+  problem-solving, and the pursuit of innovation in web development.
+</p>
+<p className="custom:text-start font-poppins font-medium tracking-tight pt-10">
+  With expertise in <strong>React, Next.js, and backend technologies</strong>, I enjoy building intuitive 
+  and scalable applications. I thrive at the intersection of <strong>technology, design, and user experience</strong>, 
+  ensuring every project I work on is both visually appealing and highly performant.
+</p>
+
  
            <button
              type="submit"

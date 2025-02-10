@@ -37,15 +37,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full  md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="font-semibold leading-none text-[4rem] mb-4  text-black dark:text-white max-w-4xl">
-          Changelog from my journey
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working and Learning  for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
-      </div>
+    <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+  <h2 className="font-semibold leading-none custom:text-[3rem] text-xl mb-4 text-black dark:text-white max-w-4xl">
+    My Learning &  Development Journey
+  </h2>
+  <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+    Over the past two years, I’ve been continuously learning and building projects. 
+    Here’s a timeline highlighting key milestones in my journey.
+  </p>
+</div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (

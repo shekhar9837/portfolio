@@ -6,74 +6,82 @@ import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
 
 const WorkExperience = () => {
-    const data = [
-        // {
-        //   title: "2024",
-        //   content: (
-        //     <div>
-        //       <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-        //         Built and launched Aceternity UI and Aceternity UI Pro from scratch
-        //       </p>
-        //       <div className="grid grid-cols-2 gap-4">
-        //         <Image src="https://assets.aceternity.com/templates/startup-1.webp" alt="startup template" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow" />
-        //         <Image src="https://assets.aceternity.com/templates/startup-2.webp" alt="startup template" width={500} height={500} className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow" />
-        //       </div>
-        //     </div>
-        //   ),
-        // },
-        {
-          title: "Experience",
-          content: (
-            <div>
-              {/* <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-                <strong>Software Development Engineer (SDE)</strong> | Bluestock Fintech (Aug 2024 - Sep 2024)
-              </p>
-              <ul className="list-disc list-inside mb-4">
-                <li>Increased user engagement by 20% through feature enhancements.</li>
-                <li>Optimized PostgreSQL queries, improving data retrieval efficiency.</li>
-                <li>Assisted in debugging and resolving critical production issues.</li>
-              </ul> */}
-              <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-                <strong>Software Development Intern</strong> | Kidjifg Technology (Oct 2024 - Jan 2025)
-              </p>
-              <ul className="list-disc list-inside mb-4">
-                <li>Developed responsive front-end components using React.js and Tailwind CSS.</li>
-                <li>Built and optimized RESTful APIs with Node.js, improving data handling efficiency by 30%.</li>
-                <li>Debugged and resolved issues, reducing bugs by 20%.</li>
-              </ul>
-            </div>
-          ),
-        },
-        {
-          title: "Projects",
-          content: (
-            <div>
-              <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-                <strong>WriteEasy</strong> | Next.js, PostgreSQL, TypeScript
-              </p>
-              <ul className="list-disc list-inside mb-4">
-                <li>Empowered 100+ users to generate high-quality content, saving over 1,000 hours.</li>
-                <li>Integrated Google Authentication, reducing sign-up time by 40%.</li>
-                <li>Designed a user-friendly interface, increasing engagement by 30%.</li>
-              </ul>
-            </div>
-          ),
-        },
-      ];
+  const data = [
+    {
+      title: "Experience",
+      content: (
+        <div>
+          <p className="flex flex-wrap items-center gap-2  text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            <strong>Software Development Intern</strong> | <strong className="flex gap-2 items-center">
+              <Image
+              src={'/logo.png'}
+              width={50}
+              height={50}
+              alt="logo"
+              className="rounded-full h-8 w-8"
+            />Kidjifg Technology (Oct 2024 - Jan 2025)
+            </strong> 
+
+          </p>
+          <ul className="list-disc list-inside mb-4 space-y-2">
+            <li>Developed <strong>scalable REST APIs</strong> using FastAPI & Node.js, improving backend performance.</li>
+            <li>Built <strong>responsive UI components</strong> with React.js, enhancing user experience.</li>
+            <li>Integrated <strong>React-Redux</strong> for state management, improving data handling efficiency.</li>
+            {/* <li>Refactored & optimized UI workflows, reducing load time by **30%**.</li> */}
+            <li>Debugged & resolved issues across frontend & backend.</li>
+          </ul>
+          <div className="inline-flex flex-wrap gap-2 mt-2">
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">React.js</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">FastAPI</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">Node.js</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">Redux</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">MongoDB</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">Firebase</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">UI Optimization</span>
+          </div>
+        </div>
+      ),
+    },
+    
+    {
+      title: "Projects",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            <strong>WriteEasy</strong> - AI-powered content generation tool
+          </p>
+          <p className="text-neutral-600 max-w-xl dark:text-neutral-300 text-xs md:text-sm font-normal mb-4">
+            WriteEasy is an AI-driven platform that helps users generate high-quality content efficiently. 
+            It simplifies content creation for blogs, articles, and scripts, saving users valuable time.
+          </p>
+          <ul className="list-disc list-inside mb-4 space-y-2">
+            <li>Empowered <strong>20+ users</strong> to generate high-quality content, saving over <strong>1,000 hours</strong>.</li>
+            <li>Integrated <strong>Google Authentication</strong>, reducing sign-up time by <strong>40%</strong>.</li>
+            <li>Designed a <strong>user-friendly UI</strong>, increasing engagement by <strong>30%</strong>.</li>
+          </ul>
+          <div className="inline-flex flex-wrap  gap-2 mt-2">
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">Next.js</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">PostgreSQL</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">Node.js</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">FastAPI</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">TypeScript</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">Vercel</span>
+          </div>
+          <div className="mt-4">
+            <a href="https://writeasy.xyz" target="_blank" rel="noopener noreferrer" 
+               className="text-blue-600 dark:text-blue-400 hover:underline text-xs md:text-sm">
+              🔗 Live Demo
+            </a>
+          </div>
+        </div>
+      ),
+    }
+    
+    
+  ];
       
   return (
     <div className="relative z-50  custom:px-10 py-20 w-full max-w-7xl">
-      {/* <div className="h-fit overflow-hidden  ">
-        <motion.h1
-          initial={{ y: "100%" }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.4, ease: "easeInOut" }}
-          className="custom:text-[7rem] text-5xl text-start  font-semibold  tracking-tight "
-        >
-          Introduction
-        </motion.h1>
-      </div> */}
 
       <div className="w-full">
       <Timeline data={data} />

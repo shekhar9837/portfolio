@@ -30,18 +30,17 @@ const IntroductionPage = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <p className="custom:text-start font-poppins font-semibold tracking-tight">
-            I'm a creative at heart, driven by a passion for crafting unique
-            visual experiences that capture the essence of a brand or story. My
-            approach is rooted in curiosity and a love for exploring the
-            intersections of art, design, photography, and storytelling.
-          </p>
-          <p className="custom:text-start font-poppins font-semibold tracking-tight pt-10">
-            I'm a creative at heart, driven by a passion for crafting unique
-            visual experiences that capture the essence of a brand or story. My
-            approach is rooted in curiosity and a love for exploring the
-            intersections of art, design, photography, and storytelling.
-          </p>
+  <p className="custom:text-start font-poppins font-medium tracking-tight">
+  I'm a passionate full-stack developer with a keen eye for design, crafting seamless digital 
+  experiences that blend functionality and aesthetics. My journey is driven by curiosity, 
+  problem-solving, and the pursuit of innovation in web development.
+</p>
+<p className="custom:text-start font-poppins font-medium tracking-tight pt-10">
+  With expertise in <strong>React, Next.js, and backend technologies</strong>, I enjoy building intuitive 
+  and scalable applications. I thrive at the intersection of <strong>technology, design, and user experience</strong>, 
+  ensuring every project I work on is both visually appealing and highly performant.
+</p>
+
 
           <button
             type="submit"
