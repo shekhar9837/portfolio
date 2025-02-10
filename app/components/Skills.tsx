@@ -58,7 +58,7 @@ const skills = [
 const Skills = () => {
   
   return (
-    <div className="relative z-50 custom:px-10 py-20">
+    <div className="relative z-10 custom:px-10 py-20">
       <div className="h-fit overflow-hidden  ">
              <motion.h1
                initial={{ y: "100%" }}
@@ -83,7 +83,7 @@ const Skills = () => {
             // timestamp={`last updated at ${time}`}
             />
         <div className="flex flex-col custom:px-16 w-full items-end justify-end">
-        <Button/>
+        {/* <Button/> */}
         </div>
         </div>
 

@@ -12,17 +12,17 @@ import ThemeToggle from "./ThemeToggle";
 export const Navbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null as number | null);
   // const items = ["HOME", "WORK", "ABOUT"];
-  const items =[
-    { name:"HOME",  link:'/'},
-    { name:"WORK",  link:'/work'},
-    { name:"ABOUT",  link:'/about'}
-  ] 
+  const items = [
+    { name: "HOME", link: "/" },
+    { name: "WORK", link: "/work" },
+    { name: "ABOUT", link: "/about" },
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const ContactButton = () => (
     <button
       type="submit"
-      className="flex justify-center gap-2 items-center mx-auto dark:border-neutral-900 border backdrop-blur-md  isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full dark:before:bg-zinc-50 before:bg-neutral-950 dark:hover:text-black hover:text-zinc-100 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden  rounded-md group"
+      className="z-50 flex justify-center gap-2 items-center mx-auto dark:border-neutral-900 border backdrop-blur-md isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full dark:before:bg-zinc-50 before:bg-neutral-950 dark:hover:text-black hover:text-zinc-100 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative  px-4 py-2 overflow-hidden rounded-md group"
     >
       CONTACT
       <svg
@@ -43,7 +43,7 @@ export const Navbar = () => {
       initial={{ y: "-100%" }}
       animate={{ y: 0 }}
       transition={{ duration: 1.4, ease: "easeInOut" }}
-      className="navbar font-ptmono z-50 absolute top-2 w-full px-6 flex items-center flex-flex justify-between max-w-7xl"
+      className="navbar font-ptmono z-50 fixed top-2 w-full px-6 flex items-center justify-between max-w-7xl mx-auto backdrop-blur-md"
     >
       <div className="name">
         <Link href={"/"}>
@@ -51,7 +51,7 @@ export const Navbar = () => {
         </Link>
       </div>
 
-
+      {/* Desktop Menu */}
       <div className="custom:flex hidden">
         {items.map((item, index) => (
           <div
@@ -72,9 +72,9 @@ export const Navbar = () => {
                     ease: "easeInOut",
                   }}
                   className="absolute font-medium tracking-wider cursor-pointer"
-                  >
+                >
                   <Link href={item.link}>
-                  {index === 2 ? item.name : `${item.name}`}
+                    {index === 2 ? item.name : `${item.name}`}
                   </Link>
                 </motion.p>
               ) : (
@@ -88,9 +88,9 @@ export const Navbar = () => {
                     ease: "easeInOut",
                   }}
                   className="absolute font-medium tracking-wider cursor-pointer"
-                  >
+                >
                   <Link href={item.link}>
-                  {index === 2 ? item.name : `${item.name}`}
+                    {index === 2 ? item.name : `${item.name}`}
                   </Link>
                 </motion.p>
               )}
@@ -98,17 +98,37 @@ export const Navbar = () => {
           </div>
         ))}
       </div>
-      <div className="custom:flex hidden gap-2">
-      <ThemeToggle/>
-        <ContactButton />
-      </div>
+      <div className="name custom:flex hidden items-center gap-2">
+      <ThemeToggle />
 
-      <div className="custom:hidden ">
+
+
+      <button
+            type="submit"
+            className="flex justify-center gap-2 items-start  dark:border-neutral-900 border backdrop-blur-md  isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full dark:before:bg-zinc-50 before:bg-neutral-950 dark:hover:text-black hover:text-zinc-100 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden  rounded-md group"
+            >
+            CONTACT
+            <svg
+
+className="w-7 h-7 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
+viewBox="0 0 16 19"
+xmlns="http://www.w3.org/2000/svg"
+>
+              <path
+                d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                className="fill-gray-800 group-hover:fill-gray-800"
+                />
+            </svg>
+          </button>
+                </div>
+
+      {/* Mobile Menu Button */}
+      <div className="custom:hidden flex items-center gap-4">
+        <ThemeToggle />
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-white rounded-md border bg-neutral-800  px-3 py-2   font-ptmono"
+          className="text-neutral-950 dark:text-white rounded-md border dark:border-neutral-800 border-neutral-200 dark:bg-neutral-800 bg-neutral-100 px-3 py-2 font-ptmono"
         >
-
           {isMenuOpen ? "CLOSE" : "MENU"}
         </button>
       </div>
@@ -121,7 +141,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute  flex flex-col items-start justify-start top-full left-0 right-0 bg-white  py-4 px-6 md:hidden"
+            className="absolute flex flex-col items-start justify-start top-full left-0 right-0 dark:bg-black bg-white py-6 px-6 custom:hidden shadow-lg"
           >
             {items.map((item, index) => (
               <motion.div
@@ -129,11 +149,12 @@ export const Navbar = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="py-2"
+                className="py-3 w-full"
               >
                 <Link
-                  href={`/${item.link}`}
-                  className="text-gray-800 hover:text-gray-600"
+                  href={item.link}
+                  className="text-neutral-950 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400 text-lg"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
@@ -143,25 +164,25 @@ export const Navbar = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: items.length * 0.1 }}
-              className="py-2"
+              className="py-3 w-full"
             >
-              CONTACT
-              <div className="flex  flex-col gap-4 py-10">
+              <h2 className="text-neutral-950 dark:text-white text-lg">CONTACT</h2>
+              <div className="flex flex-col gap-4 py-6">
                 <div className="overflow-hidden h-fit">
                   <motion.h1
                     initial={{ y: "-100%" }}
                     animate={{ y: 0 }}
-                    
-                    className="font-medium text-md tracking-wide custom:pr-14 font-ptmono"
+                    className="font-medium text-md tracking-wide font-ptmono text-neutral-950 dark:text-white"
                   >
                     {"[FOLLOW ME]"}
                   </motion.h1>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-6">
                   <Link
-                    href="https://twitter.com"
+                    href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="text-2xl text-neutral-950 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400"
                   >
                     <CiLinkedin />
                   </Link>
@@ -169,13 +190,15 @@ export const Navbar = () => {
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="text-2xl text-neutral-950 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400"
                   >
                     <RiTwitterXFill />
                   </Link>
                   <Link
-                    href="https://twitter.com"
+                    href="https://github.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="text-2xl text-neutral-950 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-400"
                   >
                     <FaGithub />
                   </Link>

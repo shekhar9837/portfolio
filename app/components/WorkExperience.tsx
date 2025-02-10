@@ -81,7 +81,7 @@ const WorkExperience = () => {
   ];
       
   return (
-    <div className="relative z-50  custom:px-10 py-20 w-full max-w-7xl">
+    <div className="relative z-10  custom:px-10 py-20 w-full max-w-7xl">
 
       <div className="w-full">
       <Timeline data={data} />

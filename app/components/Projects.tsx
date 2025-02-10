@@ -6,7 +6,7 @@ import * as motion from "motion/react-client";
 
 export const Projects = () => {
   return (
-    <div className="z-50 relative custom:px-10 py-20 flex justify-center">
+    <div className="z-10 relative custom:px-10 py-20 flex justify-center">
       <div className="w-full max-w-7xl">
         <div className="overflow-hidden h-fit custom:mb-12 mb-10 w-full">
           <motion.h2
