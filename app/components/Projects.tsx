@@ -24,13 +24,13 @@ export const Projects = () => {
           <div className="flex gap-2 custom:flex-row flex-col">
             <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[70vh]">
               <Image
-                src="/projects/WRITEASY (1).png"
+                src="/projects/WRITEASY (11).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
               />
               <Image
-                src="/projects/WRITEASY.png"
+                src="/projects/WRITEASY(1).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -38,13 +38,13 @@ export const Projects = () => {
             </div>
             <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[70vh]">
               <Image
-                src="/projects/WRITEASY (4).png"
                 fill
+                src="/projects/WRITEASY (4) (1).png"
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-              />
+                />
               <Image
-                src="/projects/WRITEASY (5).png"
+                src="/projects/WRITEASY (4) (1).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"

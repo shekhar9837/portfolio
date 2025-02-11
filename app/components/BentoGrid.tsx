@@ -5,40 +5,40 @@ import * as motion from "motion/react-client";
 const items = [
     {
       id: 1,
-      image: "/me.jpg",
-      title: "RIDGEWAY",
+      image: "/projects/WRITEASY (11).png",
+      title: "WRITEASY",
       year: "2024",
       className: "custom:grid col-span-2 row-span-2 place-content-start custom:mb-28  mb-16",
       height: "custom:h-[42rem] custom:w-[32rem] h-[20rem] w-full", // 500px to rem
     },
     {
       id: 2,
-      image: "/me.jpg",
-      title: "GARRISON & CO",
+      image: "/projects/WRITEASY (4) (1).png",
+      title: "MVP BUILDER",
       year: "2023",
       className: "col-span-1 custom:grid row-span-1 place-content-center custom:mb-28 mb-16",
-      height: "custom:h-[18rem] custom:w-[26rem] h-[20rem] w-full", // 250px to rem
+      height: "custom:h-[18rem] custom:w-[22rem] h-[20rem] w-full", // 250px to rem
     },
     {
       id: 3,
-      image: "/me.jpg",
-      title: "REBOOK",
+      image: "/projects/WRITEASY (3) (1).png",
+      title: "EVERYDAY NEEDS",
       year: "2023",
       className: "custom:grid col-span-3 row-span-1 place-content-center w-full  custom:mb-28 mb-16",
-      height: "custom:h-[28rem] custom:w-[35rem] h-[20rem] w-full", // 250px to rem
+      height: "custom:h-[28rem] custom:w-[32rem] h-[20rem] w-full", // 250px to rem
     },
     {
       id: 4,
-      image: "/me.jpg",
-      title: "EMBERLY",
+      image: "/projects/WRITEASY (9) (1).png",
+      title: "GITHUB PREDICTION",
       year: "2023",
       className: "col-span-1 row-span-2 custom:grid place-content-start  custom:mb-28 mb-16",
       height: "custom:h-[32rem] custom:h-[20rem] w-full", // 500px to rem
     },
     {
       id: 5, 
-      image: "/me.jpg",
-      title: "HIVE",
+      image: "/projects/WRITEASY (7) (1).png",
+      title: "YOUR NOTES",
       year: "2023",
       className: "col-span-2 row-span-2 custom:grid place-content-end  custom:mb-28 mb-16",
       height: "custom:h-[42rem] custom:w-[32rem] h-[20rem] w-full", // 500px to rem
