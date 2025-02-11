@@ -17,7 +17,7 @@ const items = [
       id: 2,
       image: "/projects/WRITEASY (4) (1).png",
       title: "MVP BUILDER",
-      year: "2023",
+      year: "2025",
       className: "col-span-1 custom:grid row-span-1 place-content-center custom:mb-28 mb-16",
       height: "custom:h-[18rem] custom:w-[22rem] h-[20rem] w-full", // 250px to rem
       link: "https://mvpbuilder.xyz/",
@@ -35,7 +35,7 @@ const items = [
       id: 4,
       image: "/projects/WRITEASY (9) (1).png",
       title: "GITHUB PREDICTION",
-      year: "2023",
+      year: "2024",
       className: "col-span-1 row-span-2 custom:grid place-content-start  custom:mb-28 mb-16",
       height: "custom:h-[32rem] custom:h-[20rem] w-full", // 500px to rem
       link: "https://github-prediction.vercel.app/",
@@ -44,7 +44,7 @@ const items = [
       id: 5, 
       image: "/projects/WRITEASY (7) (1).png",
       title: "YOUR NOTES",
-      year: "2023",
+      year: "2024",
       className: "col-span-2 row-span-2 custom:grid place-content-end  custom:mb-28 mb-16",
       height: "custom:h-[42rem] custom:w-[32rem] h-[20rem] w-full", // 500px to rem
       link: "https://your-notess.vercel.app/signin",
