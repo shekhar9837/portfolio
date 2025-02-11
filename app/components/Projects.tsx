@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import * as motion from "motion/react-client";
+import Link from "next/link";
 
 export const Projects = () => {
   return (
@@ -23,20 +24,23 @@ export const Projects = () => {
         <div className="flex flex-col gap-2 w-full">
           <div className="flex gap-2 custom:flex-row flex-col">
             <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[70vh]">
+            <Link href="https://writeasy.xyz/" target="_blank" >
               <Image
                 src="/projects/WRITEASY (11).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-              />
+                />
               <Image
                 src="/projects/WRITEASY(1).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              />
+                />
+                </Link>
             </div>
             <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[70vh]">
+              <Link href="https://writeasy.xyz/" target="_blank" >
               <Image
                 fill
                 src="/projects/WRITEASY (4) (1).png"
@@ -48,24 +52,27 @@ export const Projects = () => {
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              />
+                />
+              </Link>
             </div>
           </div>
           <div className="relative group w-full h-[90vh] px-10">
+            <Link href="https://everyday-need.vercel.app/" target="_blank" >
             <Image
-              src="/projects/EVERYDAY NEEDS (1).png"
+              src="/projects/EVERYDAY NEEDS (1) (1).png"
               width={1920}
               height={800}
               alt="project"
               className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
             />
             <Image
-              src="/projects/EVERYDAY NEEDS.png"
-              width={1920}
-              height={800}
-              alt="project"
-              className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            />
+              src="/projects/EVERYDAY NEEDS (2).png"
+                width={1920}
+                height={800}
+                alt="project"
+                className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </Link>
           </div>
         </div>
       </div>

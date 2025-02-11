@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning>
         <SmoothScroll>
-          <ThemeProvider attribute="class" defaultTheme="system">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <Navbar />
             <AnimatedCursor
               innerSize={8}

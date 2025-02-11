@@ -9,9 +9,9 @@ import WorkExperience from "./components/WorkExperience"
 
 export default function Page() {
   return (
-    <section id="hero">
+    <section id="hero" className="relative">
       {/* Background grid */}
-      <div className="absolute max-w-7xl inset-0 w-full h-full grid custom:grid-cols-8 grid-cols-3 gap-6 px-6 custom:px-12 pointer-events-none">
+      <div className="absolute max-w-7xl  inset-0 w-full h-full grid custom:grid-cols-8 grid-cols-3 gap-6 px-6 custom:px-12 pointer-events-none">
         {[...Array(8)].map((_, i) => (
           <div key={i} className="border-l border-r dark:border-neutral-900 border-slate-200 h-full z-10" />
         ))}
