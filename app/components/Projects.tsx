@@ -40,7 +40,7 @@ export const Projects = () => {
                 </Link>
             </div>
             <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[70vh]">
-              <Link href="https://writeasy.xyz/" target="_blank" >
+              <Link href="https://mvpbuilder.xyz/" target="_blank" >
               <Image
                 fill
                 src="/projects/WRITEASY (4) (1).png"
