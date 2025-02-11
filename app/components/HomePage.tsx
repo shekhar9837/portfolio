@@ -9,7 +9,7 @@ export const HomePage = () => {
   .filter((word) => word.length > 0);
 
   return (
-    <div className="py-24 relative w-full max-w-7xl z-40 flex flex-row items-center justify-center">
+    <div className="py-24 custom:px-10 px-6 relative w-full max-w-7xl z-40 flex flex-row items-center justify-center">
       <div className="w-full custom:max-w-[74%] max-w-2xl">
         <div className="custom:h-fit">
           <motion.h1
@@ -31,13 +31,13 @@ export const HomePage = () => {
             Shekhar
           </motion.h1>
         </div>
-        <div className="flex custom:items-start items-start custom:justify-end justify-end custom:px-28 px-1 w-full custom:gap-2 gap-10">
+        <div className="flex custom:items-start items-start custom:justify-end justify-end custom:px-28 px-1 w-full custom:gap-2 gap-8">
           <div className="overflow-hidden h-fit">
             <motion.h1
               initial={{ y: "-100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1.4, ease: "easeInOut" }}
-              className="font-medium text-md tracking-wide custom:pr-14 font-ptmono"
+              className="font-medium custom:text-md text-sm  tracking-wide custom:pr-14 font-ptmono"
             >
               {"[INTRO]"}
             </motion.h1>
@@ -53,7 +53,7 @@ export const HomePage = () => {
                   duration: 0.6,
                   delay: 0.1 * i, // ✅ Animate each word one by one
                 }}
-                className="text-md font-semibold tracking-tight "
+                className="custom:text-md text-sm font-semibold tracking-tight "
               >
                 {word}{" "}
               </motion.span>

@@ -58,7 +58,7 @@ const skills = [
 const Skills = () => {
   
   return (
-    <div className="relative z-10 custom:px-10 py-20">
+    <div className="relative z-10 custom:px-10 px-6 py-20">
       <div className="h-fit overflow-hidden  ">
              <motion.h1
                initial={{ y: "100%" }}

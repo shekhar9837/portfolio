@@ -6,7 +6,7 @@ import * as motion from "motion/react-client";
 
 export const Projects = () => {
   return (
-    <div className="z-10 relative custom:px-10 py-20 flex justify-center">
+    <div className="z-10 relative custom:px-10 px-6 py-20 flex justify-center">
       <div className="w-full max-w-7xl">
         <div className="overflow-hidden h-fit custom:mb-12 mb-10 w-full">
           <motion.h2
@@ -22,42 +22,51 @@ export const Projects = () => {
 
         <div className="flex flex-col gap-2 w-full">
           <div className="flex gap-2 custom:flex-row flex-col">
-            <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 aspect-[1/1]">
+            <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[70vh]">
               <Image
-                src="/𝙎𝙖𝙞𝙩𝙖𝙢𝙖.jpeg"
+                src="/projects/WRITEASY (1).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
               />
               <Image
-                src="/𝙎𝙖𝙞𝙩𝙖𝙢𝙖.jpeg"
+                src="/projects/WRITEASY.png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               />
             </div>
-            <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 aspect-[1/1]">
+            <div className="relative group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-[70vh]">
               <Image
-                src="/𝙎𝙖𝙞𝙩𝙖𝙢𝙖.jpeg"
+                src="/projects/WRITEASY (4).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
               />
               <Image
-                src="/𝙎𝙖𝙞𝙩𝙖𝙢𝙖.jpeg"
+                src="/projects/WRITEASY (5).png"
                 fill
                 alt="project"
                 className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               />
             </div>
           </div>
-          <Image
-            src="https://framerusercontent.com/images/uok7AcoIu4S6KOnbXtkOrgO6bk.svg"
-            width={1920}
-            height={1080}
-            alt="project"
-            className="w-full h-auto"
-          />
+          <div className="relative group w-full h-[90vh] px-10">
+            <Image
+              src="/projects/EVERYDAY NEEDS (1).png"
+              width={1920}
+              height={800}
+              alt="project"
+              className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+            />
+            <Image
+              src="/projects/EVERYDAY NEEDS.png"
+              width={1920}
+              height={800}
+              alt="project"
+              className="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+          </div>
         </div>
       </div>
     </div>

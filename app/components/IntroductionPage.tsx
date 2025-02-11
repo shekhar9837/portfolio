@@ -5,7 +5,7 @@ import * as motion from "motion/react-client";
 
 const IntroductionPage = () => {
   return (
-    <div className="relative z-10  custom:px-10 py-20 w-full max-w-7xl">
+    <div className="relative z-10  custom:px-10 px-6 py-20 w-full max-w-7xl">
       <div className="h-fit overflow-hidden  ">
         <motion.h1
           initial={{ y: "100%" }}
