@@ -13,6 +13,11 @@ import {
   SiTypescript,
   SiFastapi,
   SiNodedotjs,
+  SiGit,
+  SiGithub,
+  SiDocker,
+  SiVercel,
+  SiRedux,
 } from "react-icons/si";
 import { FaqAccordion, FAQItem } from "./FaqAccordion";
 import styled from "styled-components";
@@ -86,6 +91,26 @@ const skills = [
   {
     name: "Tailwind CSS",
     icon: <SiTailwindcss className="text-cyan-400 text-5xl" />,
+  },
+  {
+    name: "Git",
+    icon: <SiGit className="text-red-400 text-5xl" />,
+  },
+  {
+    name: "GitHub",
+    icon: <SiGithub className="text-white text-5xl" />,
+  },
+  {
+    name: "Docker",
+    icon: <SiDocker className="text-blue-600 text-5xl" />,
+  },
+  {
+    name: "Vercel",
+    icon: <SiVercel className="text-white text-5xl" />,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: <SiRedux className="text-purple-400 text-5xl" />,
   },
 ];
 
@@ -218,7 +243,7 @@ const StyledWrapper = styled.div`
             timestamp="Updated at 12:00 PM"
           />
         ) : (
-          <div className="grid grid-cols-4 custom:grid-cols-4 gap-8 w-full">
+          <div className="grid grid-cols-2 custom:grid-cols-6 gap-8 w-full">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -234,7 +259,7 @@ const StyledWrapper = styled.div`
                 >
                   {skill.icon}
                 </motion.div>
-                <span className="text-lg font-medium">{skill.name}</span>
+                <span className="text-lg font-medium text-center">{skill.name}</span>
               </motion.div>
             ))}
           </div>

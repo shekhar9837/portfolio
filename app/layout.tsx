@@ -5,8 +5,9 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import ConnectPage from "./components/ConnectPage";
 import { ThemeProvider } from "./components/theme-provider";
-import AnimatedCursor from "react-animated-cursor";
+// import AnimatedCursor from "react-animated-cursor";
 import SmoothScroll from "./components/SmoothScroll";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Shekhar",
@@ -31,7 +32,7 @@ export default function RootLayout({
         <SmoothScroll>
           <ThemeProvider attribute="class" defaultTheme="dark">
             <Navbar />
-            <AnimatedCursor
+            {/* <AnimatedCursor
               innerSize={8}
               outerSize={35}
               innerScale={1}
@@ -43,8 +44,10 @@ export default function RootLayout({
               innerStyle={{
                 backgroundColor: "var(--cursor-color)",
               }}
-            />
+            /> */}
             {children}
+                  <Analytics />
+
             <ConnectPage />
             <Footer />
           </ThemeProvider>
